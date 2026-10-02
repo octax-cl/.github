@@ -9,8 +9,8 @@
     @finvix-governance/leads · @finvix-platform/leads — pertenecer a uno no da revisión en las otras.
     En finvix el ruleset exige esa aprobación; en finvix-governance y finvix-platform no la exige.
     Merge = squash, único método permitido.
-  • Los labels los pone el bot (pr-labeler / path-labeler) a partir del commit; no los añadas a mano.
-    Único repo sin el bot: finvix-platform/landing-zone.
+  • Labels: los de avisos (`warn/*`) los pone quien revisa cuando aplican; el resto los pone Dependabot
+    o la automatización. Ningún proceso los lee para publicar.
   • Ninguna sección se borra: todas se llenan. Lo que no aplica se deja y se marca N/A —si el cambio
     no toca datos personales, la casilla de PII sigue ahí, marcada N/A—.
 -->
