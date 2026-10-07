@@ -82,7 +82,7 @@
 
 <!-- El rollback no se improvisa: el procedimiento está listo ANTES del deploy. -->
 
-- [ ] 🤖 **Automatizado** — re-deploy de la versión anterior
+- [ ] ⚙️ **Automatizado** — re-deploy de la versión anterior
 - [ ] 🛠️ **Manual** — comandos/scripts documentados aquí o enlazados
 
 ---
