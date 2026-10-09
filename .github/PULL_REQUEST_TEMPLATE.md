@@ -8,7 +8,8 @@
   • CODEOWNERS asigna como revisor al team Leads de la organización del repositorio: @finvix/leads ·
     @finvix-governance/leads · @finvix-platform/leads — pertenecer a uno no da revisión en las otras.
     En finvix el ruleset exige esa aprobación; en finvix-governance y finvix-platform no la exige.
-    Merge = squash, único método permitido.
+    Merge = merge commit, único método que el ruleset admite en el tronco. El ruleset no exige la rama
+    al día con `master`: se actualiza antes de mergear, para que el árbol que entra sea el que se probó.
   • Labels: los de avisos (`warn/*`) los pone quien revisa cuando aplican; el resto los pone Dependabot
     o la automatización. Ningún proceso los lee para publicar.
   • Ninguna sección se borra: todas se llenan. Lo que no aplica se deja y se marca N/A —si el cambio
@@ -101,4 +102,5 @@
 > ✅ **Listo para revisión.** Revisor: el team **Leads** de la organización del repositorio, vía
 > CODEOWNERS — `@finvix/leads` · `@finvix-governance/leads` · `@finvix-platform/leads`. Solo en
 > finvix el ruleset exige su aprobación.
-> · Merge por **squash**, único método que el ruleset admite en el tronco · Destino: **`master`**, la única rama larga.
+> · Merge con **merge commit**, único método que el ruleset admite en el tronco, y la rama al día con
+> `master` · Destino: **`master`**, la única rama larga.
