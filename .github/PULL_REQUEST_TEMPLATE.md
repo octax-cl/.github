@@ -15,6 +15,7 @@
   • Ninguna sección se borra: todas se llenan. Lo que no aplica se deja y se marca N/A —si el cambio
     no toca datos personales, la casilla de PII sigue ahí, marcada N/A—.
 -->
+<!-- markdownlint-disable-file MD041 -->
 
 ## 🧭 Tracking
 
