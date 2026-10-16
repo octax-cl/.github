@@ -12,8 +12,7 @@
     al día con `master`: se actualiza antes de mergear, para que el árbol que entra sea el que se probó.
   • Labels: los de avisos (`warn/*`) los pone quien revisa cuando aplican; el resto los pone Dependabot
     o la automatización. Ningún proceso los lee para publicar.
-  • Ninguna sección se borra: todas se llenan. Lo que no aplica se deja y se marca N/A —si el cambio
-    no toca datos personales, la casilla de PII sigue ahí, marcada N/A—.
+  • Ninguna sección se borra: todas se llenan. Lo que no aplica se deja y se marca N/A.
 -->
 <!-- markdownlint-disable-file MD041 -->
 
@@ -70,7 +69,6 @@
 ### 🔒 Datos sensibles (si aplica)
 
 - [ ] 🔐 **Secrets/API keys** — En Azure Key Vault / secret manager, NO en código (incluye `appsettings`/`local.settings.json`)
-- [ ] 👥 **PII** — Nombres, emails, RUTs NO aparecen en logs ni errores
 
 ### 📊 Impacto en datos / infraestructura (si aplica)
 
