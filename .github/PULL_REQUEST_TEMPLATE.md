@@ -36,6 +36,7 @@
 
 ## 🏷️ Tipo de Cambio
 <!-- Conventional Commits (commitlint.config.mjs — type-enum, 12 tipos). Marca el que corresponda al título del PR. -->
+<!-- El tipo no mueve el número de versión: por defecto sube el parche. La menor y la mayor se piden abajo. -->
 
 - [ ] ✨ **feat** — Nueva funcionalidad
 - [ ] 🐛 **fix** — Corrección de bug
@@ -53,7 +54,15 @@
 > `security` **NO es un tipo** de commitlint (type-enum no lo incluye) — es un **scope** del tier①.
 > Hardening/CVE se marca `fix(security): …` o `chore(security): …`, no con un tipo propio.
 
-- [ ] 💥 **BREAKING CHANGE** — Cambio incompatible (footer `BREAKING CHANGE:`, marca también el `semver` mayor)
+- [ ] 💥 **BREAKING CHANGE** — Cambio incompatible (footer `BREAKING CHANGE:` en el cuerpo)
+
+## 🔢 Qué versión sube
+
+<!-- El parche sube siempre. Para pedir la menor o la mayor, escribe su marca en una línea propia de este
+cuerpo, tal cual, sin nada delante: `+semver: minor` o `+semver: major`. Una mención en medio de una frase
+no cuenta, y ningún tipo del título ni el footer `BREAKING CHANGE:` sube nada por su cuenta. -->
+
+- [ ] 🔼 **Esta versión sube la menor o la mayor** — y su marca está escrita en una línea propia de aquí
 
 ---
 
