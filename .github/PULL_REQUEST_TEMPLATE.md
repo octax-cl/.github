@@ -22,7 +22,7 @@
   issue de este repositorio. La que use el repo; si usa las dos, pon las dos.
 - **Branch**: `<tipo>/PEG-XXX-<slug>` — o `<tipo>/<slug>` donde el rastro no es Jira
   > Prefijo de rama: `feature`. La versión no se corta en una rama: cada merge a `master` saca su tag
-  > `vX.Y.Z` y su release, y el tipo de commit decide qué número sube.
+  > `vX.Y.Z` y su release, y el título del PR decide qué número sube.
   > Destino: **`master`**, la única rama larga del repo. Ejemplo: `feature/PEG-123-netsuite-validations`
   > 💡 La clave `PEG` es CONVENCIÓN, no candado: ningún ruleset la exige y el aviso de CI que la pide
   > no bloquea. Donde el rastro es Jira, ponla en la rama, los commits y el título del PR; donde es el
@@ -36,7 +36,7 @@
 
 ## 🏷️ Tipo de Cambio
 <!-- Conventional Commits (commitlint.config.mjs — type-enum, 12 tipos). Marca el que corresponda al título del PR. -->
-<!-- El tipo no mueve el número de versión: por defecto sube el parche. La menor y la mayor se piden abajo. -->
+<!-- El tipo del título decide la versión: por defecto sube el parche; `feat` sube la menor y `!` la mayor. Detalle abajo. -->
 
 - [ ] ✨ **feat** — Nueva funcionalidad
 - [ ] 🐛 **fix** — Corrección de bug
@@ -58,11 +58,13 @@
 
 ## 🔢 Qué versión sube
 
-<!-- El parche sube siempre. Para pedir la menor o la mayor, escribe su marca en una línea propia de este
-cuerpo, tal cual, sin nada delante: `+semver: minor` o `+semver: major`. Una mención en medio de una frase
-no cuenta, y ningún tipo del título ni el footer `BREAKING CHANGE:` sube nada por su cuenta. -->
+<!-- El título del PR decide la versión, y GitVersion lo lee como primera línea del mensaje del merge. El
+parche sube por defecto. `feat` sube la menor y va solo en el PR que completa una funcionalidad, con la
+autorización de quien responde por el producto. Un `!` tras el tipo (`feat!:`, `fix!:`) o un pie
+`BREAKING CHANGE:` en mayúsculas exactas sube la mayor, y la decide siempre esa persona. `+semver:` no
+sube nada. -->
 
-- [ ] 🔼 **Esta versión sube la menor o la mayor** — y su marca está escrita en una línea propia de aquí
+- [ ] 🔼 **Esta versión sube la menor o la mayor** — el título lleva `feat` o `!`, o el cuerpo un pie `BREAKING CHANGE:`, con la autorización de quien responde por el producto
 
 ---
 
